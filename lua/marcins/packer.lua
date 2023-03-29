@@ -19,6 +19,18 @@ return require('packer').startup(function(use)
 	  end,
   })
 
+  use({
+	  "folke/trouble.nvim",
+	  requires = "nvim-tree/nvim-web-devicons",
+	  config = function()
+		  require("trouble").setup {
+			  -- your configuration comes here
+			  -- or leave it empty to use the default settings
+			  -- refer to the configuration section below
+		  }
+	  end
+  })
+
   use ({
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v1.x',
